@@ -61,6 +61,9 @@ public class calc {
         case '*':
         ans = mult( inp);
             break;
+        case 'c':
+            ans = cosine( inp);
+                break;
         case '/':
         ans = div( inp);
             break;
@@ -102,6 +105,11 @@ public class calc {
     public static double log(input inp)
     {
         double result =  Math.log(inp.getNum1());
+        return result;
+    }
+    public static double cosine(input inp)
+    {
+        double result =  Math.cos(inp.getNum1());
         return result;
     }
    
