@@ -54,7 +54,10 @@ public class calc {
             break;
         case '-':
         ans = sub( inp);
-            break;      
+            break;     
+         case 'l':
+        ans = log( inp);
+            break; 
         case '*':
         ans = mult( inp);
             break;
@@ -94,6 +97,11 @@ public class calc {
     public static double mod(input inp)
     {
         double result = inp.getNum1()%inp.getNum2();
+        return result;
+    }
+    public static double log(input inp)
+    {
+        double result =  Math.log(inp.getNum1());
         return result;
     }
    
