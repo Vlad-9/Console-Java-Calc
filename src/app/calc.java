@@ -88,6 +88,10 @@ public class calc {
     }
     public static double div(input inp)
     {
+        if  (inp.getNum2()==0){
+            throw new ArithmeticException("zero denominator");
+        }
+
         double result = inp.getNum1()/inp.getNum2();
         return result;
     }
