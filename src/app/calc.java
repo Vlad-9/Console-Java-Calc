@@ -104,6 +104,12 @@ public class calc {
         double result =  Math.log(inp.getNum1());
         return result;
     }
+
+    public static double cos(input inp)
+    {
+        double result =  Math.log(inp.getNum1());
+        return result;
+    }
    
     }
 
