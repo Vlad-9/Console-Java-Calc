@@ -2,44 +2,7 @@ package app;
 import java.util.Scanner;
 
 public class calc {
-   /* public static void calculate()
-    {
-        System.out.println("Enter first and second number:");
-        Scanner inp= new Scanner(System.in);
-        int num1,num2;
-        num1 = inp.nextInt();
-        num2 = inp.nextInt();
-       //input inp = new input();
-       //inp = inp.setInput();
-       
-       
-        char choose ;
-        operator op1 = new operator();
-        choose = op1.getOperator();
- 
-        switch (choose){
-        case '+':
-            System.out.println(add( num1,num2));
-            break;
-        case '-':
-            System.out.println(sub( num1,num2));
-            break;      
-        case '*':
-            System.out.println(mult( num1,num2));
-            break;
-        case '/':
-            System.out.println(div( num1,num2));
-            break;
-        case '%':
-            System.out.println(mod( num1,num2));
-            break;
-            default:
-                System.out.println("Wrong Operation");
-
-        }
-     
-    }*/
-
+   
     public static double calculate(input inp)
     {
         
@@ -49,15 +12,21 @@ public class calc {
         choose = inp.getOperator();
  
         switch (choose){
+            case 't':
+            ans = tan( inp);
+            break;
+        case 'c':
+            ans = cos( inp);
+            break;
+        case 's':
+            ans = scalb( inp);
+            break;
         case '+':
             ans = add( inp);
             break;
         case '-':
         ans = sub( inp);
-            break;     
-         case 'l':
-        ans = log( inp);
-            break; 
+            break;      
         case '*':
         ans = mult( inp);
             break;
@@ -66,6 +35,9 @@ public class calc {
             break;
         case '%':
         ans = mod( inp);
+            break;
+        case '^':
+        ans = pow( inp);
             break;
             default:
                 System.out.println("Wrong Operation");
@@ -104,6 +76,25 @@ public class calc {
         double result =  Math.log(inp.getNum1());
         return result;
     }
-   
+    public static double pow(input inp)
+    {
+        double result = (double) Math.pow(inp.getNum1(), inp.getNum2());
+        return result;
+    }
+    public static double scalb(input inp)
+    {
+        double result =  Math.scalb(inp.getNum1(), (int) inp.getNum2());
+        return result;
+    } 
+    public static double cos(input inp)
+    {
+        double result = (double) Math.cos(inp.getNum1());
+        return result;
+    }
+    public static double tan(input inp)
+    {
+        double result = (double) Math.tan(inp.getNum1());
+        return result;
+    }
     }
 
